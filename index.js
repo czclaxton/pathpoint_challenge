@@ -1,8 +1,6 @@
 const fs = require("fs");
 const readline = require("readline");
 
-// const data = fs.readFileSync("data.txt", "utf-8");
-
 Array.prototype.getLastDuplicate = function (obj) {
   for (let i = 0; i < this.length; i++) {
     if (this[i].score === obj.score) return { obj, i };
@@ -48,14 +46,6 @@ Array.prototype.getLastDuplicate = function (obj) {
         output[checkForDupes.i] = checkForDupes.obj;
       }
     });
-
-    // output = output.filter((entry) => {
-    //   if (output.some((entry) => entry.score === "b")) {
-    //     entry[entry.score] = true;
-    //     return true;
-    //   }
-    //   return false;
-    // }, Object.create(null));
 
     rl.on("close", () => {
       output.sort((a, b) => {
