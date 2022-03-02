@@ -31,6 +31,7 @@ Array.prototype.getLastDuplicate = function (obj) {
       if (!isolatedJSON) {
         console.log("THIS IS NOT JSON");
         process.exit(9);
+        // Invalid Argument
       }
 
       const formattedObj = {
