@@ -35,6 +35,7 @@ Array.prototype.getLastDuplicate = function (obj) {
       }
 
       const formattedObj = {
+        // finds first instance of an integer sequence which is the score key
         score: parseInt(line.match(/\d+/g)[0]),
         id: JSON.parse(isolatedJSON).id,
       };
@@ -49,6 +50,7 @@ Array.prototype.getLastDuplicate = function (obj) {
     });
 
     rl.on("close", () => {
+      // Sort and log the first n items in the array
       output.sort((a, b) => {
         return b.score - a.score;
       });
